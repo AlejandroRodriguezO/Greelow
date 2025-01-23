@@ -16,26 +16,31 @@ class HomePage extends StatelessWidget {
       appBar: AppBarWidget(),
       body: Stack(
         children: [
-          SizedBox(
-            height: 14,
-          ),
-          Padding(
-            padding: padding,
-            child: Text(
-              'Mover dinero',
-              style: TextStyle(
-                fontSize: 24,
-                color: AppColors.whiteColor,
-                fontWeight: FontWeight.w600,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 14,
               ),
-            ),
-          ),
-          SizedBox(
-            height: 23,
-          ),
-          Padding(
-            padding: padding,
-            child: ItemsBodyWidget(),
+              Padding(
+                padding: padding,
+                child: Text(
+                  'Mover dinero',
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: AppColors.whiteColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 23,
+              ),
+              Padding(
+                padding: padding,
+                child: ItemsBodyWidget(),
+              ),
+            ],
           ),
           DraggableWidget(),
         ],

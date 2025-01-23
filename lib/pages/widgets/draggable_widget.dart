@@ -10,8 +10,8 @@ class DraggableWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
       shouldCloseOnMinExtent: false,
-      initialChildSize: .73,
-      minChildSize: .73,
+      initialChildSize: .67,
+      minChildSize: .67,
       builder: (context, controller) {
         return Container(
           decoration: BoxDecoration(
