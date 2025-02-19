@@ -27,7 +27,7 @@ class ButtonHomeWidget extends StatelessWidget {
           Text(
             label,
             style: TextStyle(
-              color: AppColors.whiteColor.withOpacity(.8),
+              color: AppColors.whiteColor.withValues(alpha: .8),
               fontSize: 13,
               fontWeight: FontWeight.w600,
             ),

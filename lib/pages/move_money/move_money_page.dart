@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../config/app_colors.dart';
-import 'widgets/app_bar_widget.dart';
-import 'widgets/draggable_widget.dart';
-import 'widgets/items_body_widget.dart';
+import '../../config/app_colors.dart';
+import '../widgets/app_bar_widget.dart';
+import '../widgets/draggable_widget.dart';
+import '../widgets/items_body_widget.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class MoveMoneyPage extends StatelessWidget {
+  const MoveMoneyPage({super.key});
 
   @override
   Widget build(BuildContext context) {

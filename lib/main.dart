@@ -1,23 +1,32 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:prueba/config/app_colors.dart';
 
-import 'pages/home_page.dart';
+import 'di/di.dart';
+import 'config/router.dart';
 
-void main() {
+Future<void> main() async {
+  unawaited(initializeDependencies());
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> with RouterMixin {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routeInformationProvider: router.routeInformationProvider,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.scaffoldColor
-      ),
-      home: const HomePage(),
+      theme: ThemeData(scaffoldBackgroundColor: AppColors.scaffoldColor),
     );
   }
 }
